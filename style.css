@@ -1,37 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100vw;
     height: 100vh;
     background-image: url("/assets/RdTd.gif");
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
 }
 h1{
     position: relative;
-    font-size: clamp(30px, 40px, 120px);
-    font-weight: 900;
+    font-size: 40px;
+    font-weight: 1000;
     text-align: center;
     font-family: "Inter", sans-serif;
 }
-
-  
-h1::before {
-    content: attr(data-text);
-    position: absolute;
-    top: 2px;  
-    left: 2px;
-    color: rgb(214, 0, 0);
-    z-index: -1;  
-    opacity: 0.7; 
-  }
 .container1{
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    width: 100%;
+}
+#stitch{
+    max-width: 50%;
 }
 #perro{
-    max-width: 100%;
-    max-height: 40vh;
+    max-width: 50%;
 }
 #bakugo{
     max-height: 60vh;
+}
+@media (min-width: 540px){
+    h1{
+        font-size: clamp(40px, 80px, 120px);
+    }
 }
